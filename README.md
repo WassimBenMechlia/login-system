@@ -7,9 +7,9 @@ This will install PHPMailer and its dependencies in your project.
 
 # Configuration
 To configure the project, you need to create a .env file in the root directory of your project. This file should contain the following information:
-$mail->Username   = 'user@example.com';                     
-$mail->Password   = 'secret';  
-$mail->Host       = 'smtp.example.com'; 
-$mail->Port       = 465;
+SMTP_USER   = 'user@example.com';                     
+SMTP_PASS   = 'secret';  
+SMTP_HOST       = 'smtp.example.com'; 
+SMTP_PORT       = 465;
 Replace the values with your own email account details. These values will be used by PHPMailer to send emails.
 
