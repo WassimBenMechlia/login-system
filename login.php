@@ -8,9 +8,16 @@
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php
+    session_start();
+    if(isset($_SESSION['status'])) {
+      echo '<script>alert("' . $_SESSION['status'] . '");</script>';
+      unset($_SESSION['status']);
+    }
+  ?>
       <div class="login-box">
             <p>Log in</p>
-            <form action="signup.php" method="post" >
+            <form action="logincode.php" method="post" >
               <div class="user-box">
                 <input required="" name="email" type="email" id="email">
                 <label>Email</label>
@@ -19,11 +26,11 @@
                 <input required="" name="password" type="password" id="password">
                 <label>Password</label>
               </div>
-              <button name="submit">
+              <button name="login">
                 Submit
               </button>
             </form>
-            <p>Create a new account ? <a href="register.html" class="a2">Sign in!</a></p>
+            <p>Create a new account ? <a href="register.php" class="a2">Sign in!</a></p>
           </div>
 </body>
 </html>

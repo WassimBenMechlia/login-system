@@ -9,7 +9,19 @@
       <script src="script.js"></script>
 </head>
 <body>
+
+
+  <?php
+    session_start();
+    if(isset($_SESSION['status'])) {
+      echo '<script>alert("' . $_SESSION['status'] . '");</script>';
+      unset($_SESSION['status']);
+    }
+  ?>
+
+
 <div class="login-box">
+  
   <p>Register</p>
   <form action="signup.php" method="post" >
     <div class="user-box">
@@ -32,7 +44,7 @@
       Submit
     </button>
   </form>
-  <p>Already have have an account ? <a href="login.html" class="a2">Sign in!</a></p>
+  <p>Already have have an account ? <a href="login.php" class="a2">Sign in!</a></p>
 </div>
       
 </body>
